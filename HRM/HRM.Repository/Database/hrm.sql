@@ -2,15 +2,14 @@ drop table [user];
 drop table [emplyee];
 
 create table user(
-    userID integer not null auto_increment,
+    userID integer primary key AUTOINCREMENT not null,
     loginName varchar(256) not null default '',
     userName varchar(256) not null default '',
-    pwd varchar(256) not null default '',
-    primary key(userID)
+    pwd varchar(256) not null default ''
 );
 
 create table employee(
-    userID integer not null,
+    userID integer primary key not null,
     code varchar(28) not null,
     sex varchar(3) not null default 'f',
     birthDate datetime not null default '1900-1-1',
@@ -27,6 +26,5 @@ create table employee(
     email varchar(128) not null default '',
     wx varchar(128) not null default '',
     dingding varchar(128) not null default '',
-    employType varchar(3) not null default '',
-    primary key(userID)
+    employType varchar(3) not null default ''
 );
