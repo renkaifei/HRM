@@ -3,6 +3,7 @@ drop table [emplyee];
 
 create table user(
     userID integer not null auto_increment,
+    loginName varchar(256) not null default '',
     userName varchar(256) not null default '',
     pwd varchar(256) not null default '',
     primary key(userID)
