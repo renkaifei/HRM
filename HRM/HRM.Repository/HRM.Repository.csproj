@@ -8,4 +8,8 @@
     <PackageReference Include="Microsoft.Data.SQLite" Version="5.0.0-rc.2.20475.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HRM.Domain\HRM.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
