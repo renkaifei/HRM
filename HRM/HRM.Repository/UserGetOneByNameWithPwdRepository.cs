@@ -17,8 +17,8 @@ namespace HRM.Repository
         public async Task GetData()
         {
             string sql = "select userID,userName from [user] where loginName = @LoginName and pwd = @Pwd";
-            SqliteParameter prmLoginName = new SqliteParameter("@LoginName",SqliteType.Text){ Value = user.LoginName };
-            SqliteParameter prmPwd = new SqliteParameter("@Pwd",SqliteType.Text){ Value = user.Pwd };
+            SqliteParameter prmLoginName = new SqliteParameter("@LoginName",DbType.String){ Value = user.LoginName };
+            SqliteParameter prmPwd = new SqliteParameter("@Pwd",DbType.String){ Value = user.Pwd };
             DataTable dt = await FillDataAsync(sql,prmLoginName,prmPwd);
             if(dt.Rows.Count == 0) return;
             DataRow row = dt.Rows[0];

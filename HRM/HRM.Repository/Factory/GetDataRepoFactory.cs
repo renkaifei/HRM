@@ -7,7 +7,7 @@ namespace HRM.Repository.Factory
     public class GetDataRepoFactory
     {
         private static GetDataRepoFactory instance;
-        private static object obj = new object;
+        private static object obj = new object();
         
         private GetDataRepoFactory()
         {
