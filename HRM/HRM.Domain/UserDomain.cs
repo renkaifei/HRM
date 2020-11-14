@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace HRM.Domain
 {
@@ -48,6 +49,7 @@ namespace HRM.Domain
         private string pwd;
         [Required(ErrorMessage="密码不能为空")]
         [StringLength(256, ErrorMessage = "密码长度不能超过60字符")]
+        [JsonIgnore]
         public string Pwd
         {
             get{ return pwd; }
@@ -56,6 +58,11 @@ namespace HRM.Domain
                 if(pwd == value) return;
                 pwd = value;
             }
+        }
+    
+        public string Serialize()
+        {
+            return JsonConvert.SerializeObject(this);
         }
     }
 }
