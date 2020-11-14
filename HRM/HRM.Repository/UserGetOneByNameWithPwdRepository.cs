@@ -3,7 +3,7 @@ using System.Data;
 using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 using HRM.Domain;
-using HRM.Repository.Interface;
+using HRM.Repository.Interfaces;
 
 namespace HRM.Repository
 {
@@ -14,7 +14,7 @@ namespace HRM.Repository
         {
             this.user = user;
         } 
-        public async Task GetData()
+        public async Task GetDataAsync()
         {
             string sql = "select userID,userName from [user] where loginName = @LoginName and pwd = @Pwd";
             SqliteParameter prmLoginName = new SqliteParameter("@LoginName",DbType.String){ Value = user.LoginName };

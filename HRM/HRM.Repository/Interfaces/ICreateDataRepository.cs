@@ -1,4 +1,4 @@
-namespace HRM.Repository
+namespace HRM.Repository.Interfaces
 {
     public interface ICreateDataRepository
     {

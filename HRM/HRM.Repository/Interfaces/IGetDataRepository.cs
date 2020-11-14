@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 
-namespace HRM.Repository.Interface
+namespace HRM.Repository.Interfaces
 {
     public interface IGetDataRepository
     {
-        Task GetData();
+        Task GetDataAsync();
     }
 }

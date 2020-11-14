@@ -1,6 +1,6 @@
 using System;
 using HRM.Domain;
-using HRM.Repository.Interface;
+using HRM.Repository.Interfaces;
 
 namespace HRM.Repository.Factory
 {
