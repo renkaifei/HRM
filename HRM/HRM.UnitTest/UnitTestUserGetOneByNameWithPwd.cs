@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HRM.Repository.Factory;
-using HRM.Repository.Interface;
+using HRM.Repository.Interfaces;
 using System.Threading.Tasks;
 using HRM.Domain;
 
@@ -16,8 +16,8 @@ namespace HRM.UnitTest
             user.LoginName = "renkf01";
             user.Pwd = "123456";
             IGetDataRepository getData = GetDataRepoFactory.GetInstance().BuildUserGetOneByNameWithPwdRepository(user);
-            await getData.GetData();
-            Assert.IsTrue(user.UserID != 0,"没有获取到用户信息");
+            await getData.GetDataAsync();
+            Assert.IsTrue(user.Name.Equals("renkf01"),"没有获取到用户信息");
         }
     }
 }

@@ -7,11 +7,11 @@ namespace HRM.UnitTest
     [TestClass]
     public class UnitTestDataBase
     {
-        [TestMethod]
-        public async Task DbInit()
-        {
-            ICreateRepository repo = CreateRepoFactory.GetInstance().BuildDatabaseCreateRepository();
-            await repo.CreateAsync();
-        }
+        //[TestMethod]
+        //public async Task DbInit()
+        //{
+            //ICreateRepository repo = CreateRepoFactory.GetInstance().BuildDatabaseCreateRepository();
+            //await repo.CreateAsync();
+        //}
     }
 }
