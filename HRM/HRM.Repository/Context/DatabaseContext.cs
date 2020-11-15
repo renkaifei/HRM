@@ -12,7 +12,7 @@ namespace HRM.Repository
         public DatabaseContext()
         {
             dbName = "hrm.db";
-            connectionString = string.Format("Data Source={0};",dbName);
+            connectionString = string.Format("Data Source=C:\\renkf\\projects\\HRM\\HRM\\HRM.WebUI\\bin\\Debug\\netcoreapp3.1\\{0};",dbName);
         }
         public async Task<DataTable> FillDataAsync(string sql,params SqliteParameter[] sqlParams)
         {
@@ -41,10 +41,6 @@ namespace HRM.Repository
                         {
                             arrObj = new object[fieldCount];
                             reader.GetValues(arrObj);
-                            for(int i =0;i<fieldCount;i++)
-                            {
-                                Console.Write(arrObj[i]);
-                            }
                             dt.LoadDataRow(arrObj,true);
                         }
                         dt.EndLoadData();

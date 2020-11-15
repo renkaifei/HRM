@@ -10,6 +10,7 @@ namespace HRM.Domain
         private int userID;
         [Required]
         [Description("用户ID")]
+        [JsonProperty("id")]
         public int UserID
         {
             get{ return userID;}
@@ -23,6 +24,7 @@ namespace HRM.Domain
         private string name;
         [Required(ErrorMessage="用户名不能为空")]
         [StringLength(256, ErrorMessage="用户名不能超过60字符")]
+        [JsonProperty("name")]
         public string Name
         {
             get{ return name;}
@@ -36,6 +38,7 @@ namespace HRM.Domain
         private string loginName;
         [Required(ErrorMessage="登录名不能为空")]
         [StringLength(256,ErrorMessage="登录名长度不能超过60字符")]
+        [JsonProperty("loginName")]
         public string LoginName
         {
             get{ return loginName;}
